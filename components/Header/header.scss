@@ -1,0 +1,41 @@
+.block_header {
+    color: white;
+    background-color: #FFC30B;
+
+    .wrapper {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        width: 90%;
+        margin: 0 auto;
+        align-items: center;
+
+    
+        .nav_header {
+            display: flex;
+            flex-flow: row nowrap;
+    
+            li {
+                padding-left: 5rem;
+                text-decoration: none;
+                list-style-type: none;
+                font-size: 18px;
+                font-weight: 600;
+            }
+            a {
+                color: white;
+            }
+        }
+    
+        .block_auth {
+            display: flex;
+            flex-flow: row nowrap;
+            a {
+                padding-left: 2rem;
+                text-decoration: none;
+                font-size: 18px;
+
+            } 
+        }
+    }
+}
