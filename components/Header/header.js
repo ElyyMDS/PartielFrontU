@@ -13,7 +13,7 @@ const Header = (props) => {
                 <nav>
                     <ul className="nav_header">
                         <li>
-                            <Link href="#"><a>{props.counter}</a></Link>      
+                            <Link href="#"><a>Accueil</a></Link>      
                         </li>    
                         <li>
                             <Link href="#"><a>Tips</a></Link>
