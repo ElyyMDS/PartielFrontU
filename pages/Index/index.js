@@ -1,15 +1,20 @@
-import React from 'react';
-import './index.scss';
-import Header from '../../components/Header/header';
+import React from "react";
+import {connect} from "react-redux";
 import Layout from '../../components/Layout/layout';
+import * as action from '../../redux/actions/user_actions';
 
-const Index = () => {
+const Index = props => {
     return(
-        <Layout>
+        <Layout >
+            <div>Prop from getInitialProps {props.custom}</div>
+            <p onClick={() => props.dispatch({type: 'INCREMENT'})}>essaye moi</p>
         </Layout>
     );
-};
+}
 
+Index.getInitialProps = ({store, isServer, pathname, query}) => {
 
+    return {custom: 'custom'}; // You can pass some custom props to the component from here
+}
 
-export default Index
+export default connect(state => state)(Index);

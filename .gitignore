@@ -103,4 +103,16 @@ dist
 # TernJS port file
 .tern-port
 
+# Node modules not ignore for redux-api-middleware so it can work with ssr
+!node_modules/
+
+node_modules/*
+!node_modules/redux-api-middleware/
+
+node_modules/redux-api-middleware/*
+!node_modules/redux-api-middleware/lib
+
+node_modules/redux-api-middleware/lib/*
+!node_modules/redux-api-middleware/lib/index.cjs.js
+
 /out
