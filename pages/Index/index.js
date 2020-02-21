@@ -7,7 +7,7 @@ const Page = props => {
     return(
         <Layout>
             <div>Prop from getInitialProps {props.custom}</div>
-            <p onClick={() => props.dispatch(action.login('vilaty','Alexandre49'))}>essaye moi</p>
+            <p onClick={() => props.dispatch(action.register('jao_izumu','123','jao@gmail.com'))}>essaye moi</p>
         </Layout>
     );
 }
