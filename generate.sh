@@ -72,8 +72,8 @@ className="$(delimited_string_to_pascal_case $elementPath "-")"
 if [ $elementType == 'page' ] || [ $elementType == 'component' ]; then # generate component or page
 
     # generate path and missing folders
-    file=${elementType}s/$className/${elementPath}.${elementType}.js
-    styleFile=${elementType}s/$className/${elementPath}.${elementType}.scss
+    file=${elementType}s/$className/${elementPath}.js
+    styleFile=${elementType}s/$className/${elementPath}.scss
     mkdir -p ${elementType}s/$className/
 
     # generate component / page file
@@ -82,7 +82,7 @@ if [ $elementType == 'page' ] || [ $elementType == 'component' ]; then # generat
     touch $file
 
     echo "import React from 'react';"                                                               >> $file
-    echo "import './"$elementPath"."$elementType".scss';"                                           >> $file
+    echo "import './"$elementPath."scss';"                                                          >> $file
     echo ""                                                                                         >> $file
     echo "const ${className} = () => {"                                                             >> $file
     echo "      return ("                                                                           >> $file

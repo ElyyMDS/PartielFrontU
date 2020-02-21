@@ -1,0 +1,37 @@
+.side_auth{
+    height: 100%;
+    flex-basis: 10%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+
+    .login{
+        flex-basis: 48%;
+        width: 60%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .register{
+        flex-basis: 48%;
+        width: 90%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text_horizontal{
+        text-orientation: upright;
+        writing-mode: vertical-rl;
+    }
+
+    .text_horizontal.active{
+        font-weight: bold;
+        color: #FFC30B;
+    }
+
+}
