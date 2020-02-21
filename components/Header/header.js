@@ -26,10 +26,10 @@ const Header = (props) => {
                         </li>
                     </ul>
                 </nav>
-                <div className="block_auth">
-                    <Button color="white" text="Connexion" />
-                    <Button backgroundColor="white" color="#FFC30B" text="Inscription" />
-                </div>
+                {props.user.username ? <p>Coonecter en tant que : {props.user.username}</p> : <div className="auth_section">
+                    <Button color="white" text="Connexion" href="/login"/>
+                    <Button backgroundColor="white" color="#FFC30B" text="Inscription" href="/register" />
+                </div> }                
             </div>
         </header>
     ); 

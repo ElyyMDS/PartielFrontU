@@ -13,7 +13,6 @@ const Index = props => {
 }
 
 Index.getInitialProps = ({store, isServer, pathname, query}) => {
-
     return {custom: 'custom'}; // You can pass some custom props to the component from here
 }
 
