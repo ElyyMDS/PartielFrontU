@@ -2,6 +2,7 @@ import React from 'react';
 import Button from '../Button/button';
 import Link from 'next/link';
 import './header.scss';
+import {connect} from 'react-redux'
 
 
 const Header = (props) => {
@@ -12,7 +13,7 @@ const Header = (props) => {
                 <nav>
                     <ul className="nav_header">
                         <li>
-                            <Link href="#"><a>Accueil</a></Link>      
+                            <Link href="#"><a>{props.counter}</a></Link>      
                         </li>    
                         <li>
                             <Link href="#"><a>Tips</a></Link>
@@ -34,4 +35,7 @@ const Header = (props) => {
     ); 
 }
 
-export default Header
+Header.getInitialProps = ({store, isServer, pathname, query}) => {
+}
+
+export default connect(state => state)(Header);
