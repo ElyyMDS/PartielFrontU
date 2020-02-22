@@ -1,8 +1,8 @@
 export default function reducer(state = {}, action) {
     switch (action.type) {
       case 'USER_LOGIN_SUCCESS':
-        let newState = action.payload;
-        return action.payload
+        let newState = action.payload[0];
+        return newState
       case 'USER_REGISTER_SUCCESS':
         // user exist
         if(action.payload.status === 409){

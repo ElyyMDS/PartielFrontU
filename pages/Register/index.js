@@ -34,7 +34,7 @@ const Register = (props) => {
         user = {company,...user}
         ;
         console.log(user);
-        // props.dispatch(userActions.register());
+        props.dispatch(userActions.register(user));
     }
 
     const handleTypeChange = () => {

@@ -6,6 +6,7 @@ import {connect} from 'react-redux'
 
 
 const Header = (props) => {
+    console.log(props)
     return(
         <header className="block_header">
             <div className="wrapper">
@@ -26,7 +27,7 @@ const Header = (props) => {
                         </li>
                     </ul>
                 </nav>
-                {props.user.username ? <p>Coonecter en tant que : {props.user.username}</p> : <div className="auth_section">
+                {props.user.username ? <p>Coonecter en tant que : {props.user.username} as {props.user.type}</p> : <div className="auth_section">
                     <Button color="white" text="Connexion" href="/login"/>
                     <Button backgroundColor="white" color="#FFC30B" text="Inscription" href="/register" />
                 </div> }                
