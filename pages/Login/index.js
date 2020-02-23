@@ -11,12 +11,12 @@ import SideAuth from '../../components/SideAuth/sideAuth';
 
 const Login = (props) => {
 
+
+
     const [username,setUsername] = useState('');
     const [password,setPassword] = useState('');
-
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(username);
         props.dispatch(userActions.login(username,password));
         
     }
@@ -39,7 +39,7 @@ const Login = (props) => {
                         <div className="form_block">
                             <h2 className="form_title">Connexion</h2>
                                 <form onSubmit={(e) => handleSubmit(e)} className="form">
-                                    <CustomInput placeholder="Identifiant" handleChange={handleUsername} />
+                                    <CustomInput placeholder="Adresse Email" handleChange={handleUsername} />
                                     <CustomInput placeholder="Mot de passe"   handleChange={handlePassword} />
                                     <Button type="submit" color="#FFC30B" text="Connexion" borderColor="#FFC30B" />
                                 </form>
@@ -55,6 +55,11 @@ const Login = (props) => {
             </main>
         </Layout>
       )
+}
+
+Login.getInitialProps = ({store, isServer, pathname, query}) =>{
+    
+
 }
 
 export default connect(state=>state)(Login)

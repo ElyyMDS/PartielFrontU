@@ -1,8 +1,8 @@
 export default function reducer(state = {}, action) {
     switch (action.type) {
       case 'USER_LOGIN_SUCCESS':
-        let newState = action.payload;
-        return action.payload
+        console.log(action.payload)
+        return {...state,...action.payload.user,jwt: action.payload.access_token}
       case 'USER_REGISTER_SUCCESS':
         // user exist
         if(action.payload.status === 409){
@@ -14,6 +14,7 @@ export default function reducer(state = {}, action) {
       case 'USER_REGISTER_FAILURE':
       case 'USER_LOGIN_FAILURE':
       default:
+        console.log('lol');
         return state
     }
   }

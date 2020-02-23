@@ -22,7 +22,19 @@ const Register = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        props.dispatch(userActions.register(username,password,email))
+        let user = {
+            email,
+            password,
+            username,
+            type
+        }
+        type === 'user' ? 
+        user = {prenom,nom,...user}
+        :
+        user = {company,...user}
+        ;
+        console.log(user);
+        props.dispatch(userActions.register(user));
     }
 
     const handleTypeChange = () => {
@@ -77,9 +89,9 @@ const Register = (props) => {
                             <h2 className="form_title">Inscription</h2>
                                 <form onSubmit={(e) => handleSubmit(e)} className="form">
                                     {type === 'user' ? 
-                                        <div style={{display: 'flex',flexFlow: 'row nowrap',justifyContent: 'space-between',width:'54%'}}>
-                                            <CustomInput placeholder="Nom" width="40%" handleChange={handleNom}/>
-                                            <CustomInput placeholder="Prenom" width="40%" handleChange={handlePrenom}/>
+                                        <div style={{display: 'flex',flexFlow: 'row nowrap',justifyContent: 'space-between',width: "73%"}}>
+                                            <CustomInput placeholder="Nom" width="42%" handleChange={handleNom}/>
+                                            <CustomInput placeholder="Prenom" width="42%" handleChange={handlePrenom}/>
                                         </div>
                                     :   <CustomInput placeholder="Nom de l'entreprise"  handleChange={handleCompany}/>
                                     }
