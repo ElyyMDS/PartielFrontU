@@ -11,12 +11,12 @@ import SideAuth from '../../components/SideAuth/sideAuth';
 
 const Login = (props) => {
 
+
+
     const [username,setUsername] = useState('');
     const [password,setPassword] = useState('');
-
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log({username,password});
         props.dispatch(userActions.login(username,password));
         
     }
@@ -55,6 +55,11 @@ const Login = (props) => {
             </main>
         </Layout>
       )
+}
+
+Login.getInitialProps = ({store, isServer, pathname, query}) =>{
+    
+
 }
 
 export default connect(state=>state)(Login)

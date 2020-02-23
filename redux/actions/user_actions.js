@@ -25,7 +25,7 @@ export const login = (username,password) => ({
 
 export const register = (user) => ({
     [RSAA]: {
-        endpoint: 'http://localhost:3001/users/register',
+        endpoint: 'http://localhost:3001/user/register',
         method: 'POST',
         body: JSON.stringify(user),
         headers: { 'Content-Type': 'application/json', },
