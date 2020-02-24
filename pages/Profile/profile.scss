@@ -2,18 +2,104 @@
     width: 100%;
 
     .profile_header{
-        width:80%;
+        width:60%;
         background-color:#F4F4F4;
-        margin: 0 auto;
+        margin: 50px auto;
 
         .wrapper{
-            width: 80%;
+            width: 90%;
             margin:0 auto;
+            padding: 25px 0;
             display: flex;
             flex-flow: row wrap;
             justify-content: space-between;
             align-items: center;
 
+            .profile_info{
+                flex-basis: 35%;
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: center;
+                height: 100%;
+                align-items: center;
+
+                .profile_username{
+                    color:#FFC30B;
+                    margin-bottom: 25px;
+                }
+            }
+
+            .profile_description{
+                flex-basis: 65%;
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: space-between;
+
+                .profile_title{
+                    font-weight: bold;
+                    font-size: 26px;
+                    margin-bottom: 40px;
+                }
+
+                .profile_text{
+                    margin-bottom: 40px;
+                }
+
+                .profile_city{
+                    margin-bottom: 40px;
+                }
+
+                .wrapper_button{
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: space-evenly;
+                }
+            }
+        }
+    }
+
+    .profile_content{
+        width: 80%;
+        background-color:#F4F4F4;
+        margin: 50px auto;
+
+        .wrapper{
+            padding-top: 10px;
+            width:90%;
+            margin: 0 auto;
+
+            .profile_tab{
+                width: 100%;
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-around;
+                align-items: center;
+                padding-bottom: 25px;
+                                                                                        
+                .tab{
+                    cursor: pointer;
+                    flex-basis: 29%;
+                    text-align: center;
+                    border-bottom: 1px solid black;
+                    padding: 15px 1.52vw;
+
+                    .tab_title{
+                        font-size: 20px;
+                        font-weight: 400;
+                    }
+
+                    &.active{
+                        border: 1px solid black;
+                        border-bottom-width: 0px;
+
+                        .tab_title{
+                            color: #FFC30B;
+                            font-size: 20px;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
         }
     }
 }

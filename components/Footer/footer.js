@@ -45,9 +45,9 @@ const Footer = () => {
                 </ul>
                 <div className="footer_social">
                     <ul className="footer_social_menu">
-                        <li className="footer_social_item"><Link href="#" ><a><img src="assets/twitter.svg" /></a></Link></li>
-                        <li className="footer_social_item"><Link href="#" ><a><img src="assets/instagram.svg" /></a></Link></li>
-                        <li className="footer_social_item"><Link href="#" ><a><img src="assets/facebook.svg" /></a></Link></li>
+                        <li className="footer_social_item"><Link href="#" ><a><img src="/assets/twitter.svg" /></a></Link></li>
+                        <li className="footer_social_item"><Link href="#" ><a><img src="/assets/instagram.svg" /></a></Link></li>
+                        <li className="footer_social_item"><Link href="#" ><a><img src="/assets/facebook.svg" /></a></Link></li>
                     </ul>
                 </div>
             </div>
