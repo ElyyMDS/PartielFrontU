@@ -2,18 +2,18 @@ import React from 'react';
 import './Card.scss';
 
 const Card = (props) => {
-    console.log(props.backgroundImg)
+
       return (
-          <div className="card" style={{backgroundImage: props.backgroundImg}}>
+          <div className="card" style={{backgroundImage: props.backgroundImg,flexBasis: props.flexBasis ? props.flexBasis : false}}>
               <div className="card_overlay">
                   <div className="details">
                     <img src="/assets/heart.svg"></img>
-                    <span>4012</span>
+                    <span>{props.like}</span>
                   </div>
-                  <p>@Bodine</p>
+                  <p>@{props.username}</p>
               </div>
           </div>
-      )
+      );
 }
 
 export default Card

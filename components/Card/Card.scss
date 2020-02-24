@@ -1,9 +1,9 @@
 .card {
     background-size: cover;
     background-position: center;
-    width: 400px;
-    height: 400px;
     margin-bottom: 3rem;
+    height: 350px;
+
 
     img {
         max-width: 50px;
@@ -13,8 +13,8 @@
         opacity: 0;
         transition: 0.3s all;
         background-color: rgba($color: #000000, $alpha: 0.5);
-        width: 400px;
-        height: 400px;
+        height:100%;
+        width:100%;
         display: flex;
         flex-flow: column;
         align-items: center;

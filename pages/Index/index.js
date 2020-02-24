@@ -13,27 +13,11 @@ import Button from '../../components/Button/button';
 
 const Index = props => {
 
-    if (props.isServer) {
-        var mySwiper = new Swiper('.swiper-container', {
-            slidesPerView: 3,
-            spaceBetween: 30,
-            slidesPerGroup: 3,
-            loop: true,
-            loopFillGroupWithBlank: true,
-            pagination: {
-              el: '.swiper-pagination',
-              clickable: true,
-            },
-            navigation: {
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
-            },
-         });
-    }
+    
     const data = [
-        {backgroundImg: `url('/assets/1.png')`, like: 410},
-        {backgroundImg: `url('/assets/2.jpg')`, like: 410},
-        {backgroundImg: `url('/assets/3.jpg')`, like: 410},
+        {backgroundImg: `url('/assets/1.png')`, like: 410,username: "Alexandre"},
+        {backgroundImg: `url('/assets/2.jpg')`, like: 410,username: "Alexandre"},
+        {backgroundImg: `url('/assets/3.jpg')`, like: 410,username: "Alexandre"},
         
     ]
     return(
@@ -57,11 +41,11 @@ const Index = props => {
                         </div>
                     </div>
                 </div>
-               <div className="block_publication">
+                <div className="block_publication">
                     <h2>Les publications préférées des utilisateurs</h2>
                     <div className="wrapper">
                         {data.map((post, index) => {
-                            return <Card key={index} backgroundImg={post.backgroundImg}/>
+                            return <Card key={index} backgroundImg={post.backgroundImg} like={post.like} username={post.username} flexBasis="30%"/>
                         })}
                     </div>
                 </div>
@@ -100,7 +84,7 @@ const Index = props => {
                         <h2>Pour ne rien rater<br></br>Inscrivez-vous à notre <span>newsletter</span> !</h2>
                         <form className="form_mail_newsletter">
                             <input placeholder="Mail"></input>
-                            <Button color="white" text="Envoyer" />
+                            <Button color="white" text="Envoyer" href="#"/>
                         </form>
                     </div>
 
@@ -122,12 +106,12 @@ const Index = props => {
                     <div className="block_inscription">
                         <div className="wrapper">
                             <p className="title">Réaliser. Partager. Trouver.<br></br>Inscivez-vous dès maintenant sur <span>U.</span></p>
-                            <Button padding="10px" width="10%" backgroundColor="#FFC308" color="white" text="S'inscrire"/>
+                            <Button padding="10px" width="10%" backgroundColor="#FFC308" color="white" text="S'inscrire" href="#"/>
                             <p className="sub_title">Le réseau professionnel qui s'adapte à vous.</p>
                             <p className="sub_title_2">#emploi #stage #alternance #U.</p>
                         </div>
                     </div>
-                    <div class="wrapper_line_chevron">
+                    <div className="wrapper_line_chevron">
                         <div className="block_line_2">
                             <div className="line small"></div>
                             <div className="line medium"></div>
