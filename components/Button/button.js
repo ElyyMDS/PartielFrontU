@@ -8,6 +8,7 @@ const Button = (props) => {
         backgroundColor: props.backgroundColor,
         color: props.color,
         borderColor: props.borderColor,
+        flexBasis: props.flexBasis?props.flexBasis:''
     };
 
     if (props.type === "submit" ){
@@ -19,7 +20,7 @@ const Button = (props) => {
     } else {
         return( 
             <Link href={props.href}>
-                <a >
+                <a>
                     <p className="button" style={style}>{props.text}</p>
                 </a>
             </Link>
