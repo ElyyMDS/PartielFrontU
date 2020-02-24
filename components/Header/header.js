@@ -8,13 +8,13 @@ import {connect} from 'react-redux'
 const Header = (props) => {
     console.log(props)
     return(
-        <header className="block_header">
+        <header id="top" className="block_header">
             <div className="wrapper">
                 <Link href="#"><a><img className="logo_U" src="/assets/U_blanc-8.png"></img></a></Link>
                 <nav>
                     <ul className="nav_header">
                         <li>
-                            <Link href="#"><a>{props.counter}</a></Link>      
+                            <Link href="#"><a>Accueil</a></Link>      
                         </li>    
                         <li>
                             <Link href="#"><a>Tips</a></Link>
