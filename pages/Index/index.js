@@ -7,6 +7,8 @@ import Card from "../../components/Card/Card";
 import Link from 'next/link';
 import Swiper from "swiper";
 import Head from 'next/head';
+import Button from '../../components/Button/button';
+
 
 
 const Index = props => {
@@ -42,7 +44,7 @@ const Index = props => {
                   <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
             </Head>
             <main className="block_accueil">
-                <div className="block_top">
+                <div  className="block_top">
                     <h2>Vous êtes...</h2>
                     <div className="wrapper">
                         <div className="block_particulier">
@@ -77,33 +79,62 @@ const Index = props => {
                         </ul>
                     </div>
                 </div>
-                <div className="block_line">
+                <div className="block_line_1">
                     <div className="line small"></div>
                     <div className="line medium"></div>
                 </div>
                 <div className="block_content">
                     <div className="block_left">
-                        <div class="swiper-container">
-                            <div class="swiper-wrapper">
-                            <div class="swiper-slide">Slide 1</div>
-                            <div class="swiper-slide">Slide 2</div>
-                            <div class="swiper-slide">Slide 3</div>
-                            <div class="swiper-slide">Slide 4</div>
-                            <div class="swiper-slide">Slide 5</div>
-                            <div class="swiper-slide">Slide 6</div>
-                            <div class="swiper-slide">Slide 7</div>
-                            <div class="swiper-slide">Slide 8</div>
-                            <div class="swiper-slide">Slide 9</div>
-                            <div class="swiper-slide">Slide 10</div>
-                            </div>
-                            <div class="swiper-pagination"></div>
-                            <div class="swiper-button-next"></div>
-                            <div class="swiper-button-prev"></div>
-                        </div>
+                        
                     </div>
                             
+                    <div className="block_tips yellow">
+                        <div className="wrapper">
+                            <h2>Ce mois-ci retrouver nos tips <br></br>pour vos <span>entretiens </span>!</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget metus eget ligula bibendum vehicula. Donec magna lacus, consectetur quis orci sed, tristique scelerisque nisl. Cras sed pulvinar risus. Sed.</p>
+                            <p className="tip"><a href="">Voir tous les tips</a></p>
+                        </div>
+                    </div>
+
+                    <div className="block_newsletter yellow">
+                        <h2>Pour ne rien rater<br></br>Inscrivez-vous à notre <span>newsletter</span> !</h2>
+                        <form className="form_mail_newsletter">
+                            <input placeholder="Mail"></input>
+                            <Button color="white" text="Envoyer" />
+                        </form>
+                    </div>
+
                     <div className="block_right">
-                        <p>lorem</p>
+                         
+                    </div>
+
+                    <div className="block_faq_left">
+
+                    </div>
+
+                    <div className="block_faq_right">
+                        <div className="wrapper">
+                            <h2>Vous avez besoin d'aide ? Découvrez notre <span>foire aux questions </span>!</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget metus eget ligula bibendum vehicula. Donec magna lacus, consectetur quis orci sed, tristique scelerisque nisl. Cras sed pulvinar risus. Sed.</p>
+                        </div>
+                    </div>
+
+                    <div className="block_inscription">
+                        <div className="wrapper">
+                            <p className="title">Réaliser. Partager. Trouver.<br></br>Inscivez-vous dès maintenant sur <span>U.</span></p>
+                            <Button padding="10px" width="10%" backgroundColor="#FFC308" color="white" text="S'inscrire"/>
+                            <p className="sub_title">Le réseau professionnel qui s'adapte à vous.</p>
+                            <p className="sub_title_2">#emploi #stage #alternance #U.</p>
+                        </div>
+                    </div>
+                    <div class="wrapper_line_chevron">
+                        <div className="block_line_2">
+                            <div className="line small"></div>
+                            <div className="line medium"></div>
+                        </div>
+                        <div>
+                            <li className="footer_social_item"><Link href="#top" ><a><img src="assets/down-chevron.png" /></a></Link></li>
+                        </div>
                     </div>
                 </div>
             </main>

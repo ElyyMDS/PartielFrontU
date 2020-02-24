@@ -7,7 +7,7 @@ import {connect} from 'react-redux'
 
 const Header = (props) => {
     return(
-        <header className="block_header">
+        <header id="top" className="block_header">
             <div className="wrapper">
                 <Link href="#"><a><img className="logo_U" src="/assets/U_blanc-8.png"></img></a></Link>
                 <nav>
