@@ -1,0 +1,19 @@
+.block_profile{
+    width: 100%;
+
+    .profile_header{
+        width:80%;
+        background-color:#F4F4F4;
+        margin: 0 auto;
+
+        .wrapper{
+            width: 80%;
+            margin:0 auto;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+    }
+}
