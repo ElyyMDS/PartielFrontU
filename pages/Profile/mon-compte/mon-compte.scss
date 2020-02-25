@@ -1,0 +1,92 @@
+.block_mon-compte{
+    width:100%;
+    
+    >.wrapper{
+        width:70%;
+        margin: 25px auto 75px auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 60vh;
+
+        .block_left{
+            flex-basis: 33%;
+            height:100%;
+            flex-flow: column wrap;
+            align-items: stretch;
+            justify-content: space-between;
+            display: flex;
+
+            .user_info{
+                flex-basis: 25%;
+                -webkit-box-shadow: 0px 0px 6px -1px rgba(0,0,0,0.75);
+                -moz-box-shadow: 0px 0px 6px -1px rgba(0,0,0,0.75);
+                box-shadow: 0px 0px 6px -1px rgba(0,0,0,0.75);
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-evenly;
+                align-items: center;
+
+                .user_img{
+                    max-width:100px;
+                }
+
+                .wrapper{
+                    display: flex;
+                    flex-flow: column wrap;
+                    text-align: center;
+                    justify-content: space-between;
+                    align-items: space-between;
+
+                    p{
+                        margin:5px 0;
+                        font-size: 9pt;
+                    }
+
+                    .user_name{
+                        font-weight: bold;
+                        color: #FFC30B;
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            .user_section{
+                display: flex;
+                flex-basis: 13%;
+                flex-flow: row wrap;
+                justify-content: center;
+                margin: 5px 0;
+                align-items: center;
+                -webkit-box-shadow: 0px 0px 6px -1px rgba(0,0,0,0.75);
+                -moz-box-shadow: 0px 0px 6px -1px rgba(0,0,0,0.75);
+                box-shadow: 0px 0px 6px -1px rgba(0,0,0,0.75);
+                cursor: pointer;
+                transition: all .3s;
+
+                &.active{
+                    color:#FFC30B;
+                    font-weight: bold;
+                }
+                &:hover{
+                    color:#FFC30B;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .block_right{
+            flex-basis: 65%;
+            height:100%;
+            background-image: url('/assets/entreprise.jpg');
+            background-size: contain;
+        }
+    }
+
+    .title{
+        font-weight: bold;
+        font-size: 50px;
+        text-align: center;
+        margin-top: 60px;
+    }
+}
