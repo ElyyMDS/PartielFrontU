@@ -12,7 +12,7 @@ const Profile = (props) => {
     const router = useRouter();
     const { id } = router.query;
     const [userId,setUserId] = useState(id);
-    const [type,setType] = useState('contact');
+    const [type,setType] = useState('portfolio');
 
     const [posts,setPosts] = useState([
         {backgroundImg: "url('/assets/1.png')",like: 3025,username:'Axelle'},

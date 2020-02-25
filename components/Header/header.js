@@ -14,22 +14,22 @@ const Header = (props) => {
                 <nav>
                     <ul className="nav_header">
                         <li>
-                            <Link href="#"><a>Accueil</a></Link>      
+                            <Link href="/"><a>Accueil</a></Link>      
                         </li>    
                         <li>
-                            <Link href="#"><a>Tips</a></Link>
+                            <Link href="/tips"><a>Tips</a></Link>
                         </li>
                         <li>
-                            <Link href="#"><a >Offres d'emplois</a></Link>
+                            <Link href="/emploi"><a >Offres d'emplois</a></Link>
                         </li>
                         <li>
-                            <Link href="#"><a>Adopter une abeille</a></Link>
+                            <Link href="/support-us"><a>Adopter une abeille</a></Link>
                         </li>
                     </ul>
                 </nav>
                 {props.user.username ? 
                 <div className="user_block">
-                    <img src="/assets/IMG_2707.png" className="user_img" />
+                    <Link href={`/profile/${props.user._id}`}><a><img src="/assets/IMG_2707.png" className="user_img" /></a></Link>
                     <p className="username">{props.user.username}</p>
                 </div>
                 : <div className="auth_section">
