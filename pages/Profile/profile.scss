@@ -62,6 +62,7 @@
         width: 80%;
         background-color:#F4F4F4;
         margin: 50px auto;
+        padding-bottom: 50px;
 
         .wrapper{
             padding-top: 10px;
@@ -98,6 +99,51 @@
                             font-weight: bold;
                         }
                     }
+                }
+            }
+
+            .profile_post{
+                width: 100%;
+                margin: 0 auto;
+                display: flex;
+                flex-flow: row wrap;
+                align-items: center;
+                justify-content: space-evenly;
+
+
+            }
+
+            .profile_contact{
+                text-align: center;
+                background-color: white;
+                width:60%;
+                margin:0 auto;
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: center;
+                
+
+                .ou{
+                    color:#FFC30B;
+                    font-weight: bold;
+                    margin:15px 0;
+                }
+
+                .profile_social{
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: space-between;
+                    width:17em;
+                    margin: 0 auto;
+                    list-style-type: none;
+                    margin-top: 25px;
+                    padding:0;
+                    padding-bottom: 25px;
+
+                }
+
+                .user_info_contact{
+                    margin: 15px 0;
                 }
             }
         }
