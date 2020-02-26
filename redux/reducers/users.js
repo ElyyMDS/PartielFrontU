@@ -14,7 +14,6 @@ export default function reducer(state = {}, action) {
       case 'USER_REGISTER_FAILURE':
       case 'USER_LOGIN_FAILURE':
       default:
-        console.log('lol');
         return state
     }
   }
