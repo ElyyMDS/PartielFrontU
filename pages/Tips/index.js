@@ -7,6 +7,7 @@ import { activeElement } from 'dom-helpers';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { faMoneyCheckAlt } from '@fortawesome/free-solid-svg-icons';
+import Link from 'next/link';
 
 const Tips = props => {
 
@@ -33,7 +34,7 @@ const Tips = props => {
             <div className="block_question">
                 <div className="grosse_div">
                     <div className="block_wrapper">
-                        <div className={activeElement === 1 ? "question active" : "question"} onClick={() =>  activeElement==1 ? setActiveElement(0) : setActiveElement(1)} >
+                       <div className={activeElement === 1 ? "question active" : "question"} onClick={() =>  activeElement==1 ? setActiveElement(0) : setActiveElement(1)} >
                             <h2>1</h2>
                             <h3>Comment rédiger son CV ?</h3>
                         </div>
@@ -53,11 +54,8 @@ const Tips = props => {
                     <div className="block_answer" style={{flexBasis: activeElement === 0 ? "0%" : "65%"}}>
                         <div className="inner">
                             <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum commodo libero non nisi condimentumumsan finibus augue dignissim. Deld Nullam tincidunt.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum commodo libero non nisi condimentumumsan finibus augue dignissim. Deld Nullam tincidunt.
-                                - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             </p>
-                            <Button href="/tips_details" color="#FFC30B" text="Voir l'article" />
+                            <Button href={`/tips/${activeElement}`} color="#FFC30B" text="Voir l'article" />
                         </div>
                         <div className="block_img" style={{order: activeElement>2 ? -1 : 2}}>
                             <img src="/assets/1.png" className="answer_img" />

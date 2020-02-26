@@ -1,0 +1,66 @@
+.card_emploi {
+    flex-basis: 30%;
+    text-align: center;
+    margin: 0 auto 3rem;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(173,173,173, 0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(173,173,173,0.75);
+    box-shadow: 0px 0px 10px 0px rgba(173,173,173,0.75);
+
+    h3 {
+        font-size: 24px;
+        color: #FFC30B;
+        margin-bottom: 0.5em;
+    }
+
+    .clip {
+        img {
+            width: 50px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    }
+
+    .img {
+        border-radius: 50%;
+        -webkit-box-shadow: 0px 0px 15px 0px rgba(173,173,173, 0.75);
+        -moz-box-shadow: 0px 0px 15px 0px rgba(173,173,173,0.75);
+        box-shadow: 0px 0px 15px 0px rgba(173,173,173,0.75);
+        width: 200px;
+        height: 200px;
+        margin: 2rem 0 1rem;
+        object-fit: cover;
+    }
+
+    .content {
+        width: 70%;
+        text-align: justify;
+        margin: 0 auto;
+
+        .type {
+            text-align: center;
+            padding-bottom: 1rem;
+            font-weight: 100;
+            font-size: 24px;
+        }
+
+        .text {
+            width: 80%;
+            margin: 0 auto;
+            text-align-last: center;
+        }
+ }
+
+.details {
+    padding-top: 2rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    font-weight: 800;
+        .fa {
+            width: 30px;
+            padding: 0 1em;
+        }
+    }
+}
