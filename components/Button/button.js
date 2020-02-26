@@ -8,7 +8,8 @@ const Button = (props) => {
         backgroundColor: props.backgroundColor,
         color: props.color,
         borderColor: props.borderColor,
-        flexBasis: props.flexBasis?props.flexBasis:''
+        flexBasis: props.flexBasis?props.flexBasis:'',
+        width: props.width?props.width:'auto',
     };
 
     if (props.type === "submit" ){
