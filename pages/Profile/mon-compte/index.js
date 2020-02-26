@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { connect } from 'react-redux';
 import Layout from '../../../components/Layout/layout';
 import './mon-compte.scss';
+import Button from '../../../components/Button/button'
 
 const MonCompte = props => {
 
@@ -40,7 +41,28 @@ const MonCompte = props => {
                         </section>
                     </div>
                     <div className="block_right">
-
+                        {type === 'forfait' ? 
+                        <div className="block_forfait">
+                        <div className="forfait_item">
+                             <h3 className="forfait_name">Forfait premium I</h3>
+                             <p className="forfait_advantage">Accès statistiques/nombre de vu profile</p>
+                             <p className="forfait_advantage">Déposer une annonce de recherche</p>
+                             <p className="forfait_advantage">1 Boost offert</p>
+                             <p className="forfait_advantage">Réductions des publicités</p>
+                             <p className="forfait_price">4.99€/<span>mois</span></p>
+                             <Button href="payment" color="white" backgroundColor="#FFC30B" borderColor="FFC30B" text="Passer à premium I" width="auto"/>
+                        </div>
+                        <div className="forfait_item">
+                             <h3 className="forfait_name">Forfait premium II</h3>
+                             <p className="forfait_advantage">Accès visionner profils et posts</p>
+                             <p className="forfait_advantage">En tête de liste</p>
+                             <p className="forfait_advantage">1 Boost de publication</p>
+                             <p className="forfait_advantage">Suppressions des publicités</p>
+                             <p className="forfait_price">6.99€/<span>mois</span></p>
+                             <Button href="payment" color="white" backgroundColor="#FFC30B" borderColor="FFC30B" text="Passer à premium I" width="auto"/>
+                        </div>
+                    </div>
+                    : false }
                     </div>
                 </div>
             </main>
