@@ -14,7 +14,7 @@ const Profile = (props) => {
     const router = useRouter();
     const { id } = router.query;
     const [userId,setUserId] = useState(id);
-    const [tab,setTab] = useState('portfolio');
+    const [tab,setTab] = useState('cv');
     const [file,setFile] = useState([]);
     const [postValue,setPostValue] = useState([]);
     const [modif,setModif] = useState(false);
@@ -167,6 +167,99 @@ const Profile = (props) => {
                             </div>
                         </div> : tab === 'cv' ? 
                         <div className="profile_cv">
+
+
+
+
+
+
+
+                        
+
+                        <div className="block_field">
+                            <div className="field_wrapper">
+                                <h3 className="title black">Compétences</h3>
+                                <div className="field_item_wrapper">
+                                    <div className="field_item">
+                                        <p className="item_title">Création graphique</p>
+                                        <p className="item_sub">Indesign, Illustrator, Photoshop, XD, After Effect, Premiere Pro</p>
+                                        <p className="item_utility">Déclinaisons de support print  | Maquettes web & mobile | Motion design & montages vidéos</p>
+                                    </div>
+                                    <div className="field_item">
+                                        <p className="item_title">Création graphique</p>
+                                        <p className="item_sub">Indesign, Illustrator, Photoshop, XD, After Effect, Premiere Pro</p>
+                                        <p className="item_utility">Déclinaisons de support print  | Maquettes web & mobile | Motion design & montages vidéos</p>
+                                    </div>
+                                    <div className="field_item">
+                                        <p className="item_title">Création graphique</p>
+                                        <p className="item_sub">Indesign, Illustrator, Photoshop, XD, After Effect, Premiere Pro</p>
+                                        <p className="item_utility">Déclinaisons de support print  | Maquettes web & mobile | Motion design & montages vidéos</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div className="block_field">
+                            <div className="field_wrapper">
+                                <h3 className="title yellow">Formations</h3>
+                                <div className="field_item_wrapper">
+                                    <div className="second_item">
+                                        <p className="item_title">My Digital School - Angers</p>
+                                        <p className="item_sub">Diplôme : Bachelor Concepteur et réalisateur web & digital spécialisation Webdesign</p>
+                                        <p className="item_utility">WebDesign | WebMarketing | Développement Web | Communication visuelle & digitale | Gestion de projets</p>
+                                        <p className="diplome">Diplôme obtenu</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="block_field">
+                            <div className="field_wrapper">
+                                <h3 className="title black">Compétences</h3>
+                                <div className="field_item_wrapper">
+                                    <div className="field_item">
+                                        <p className="item_title">Création graphique</p>
+                                        <p className="item_sub">Indesign, Illustrator, Photoshop, XD, After Effect, Premiere Pro</p>
+                                        <p className="item_utility">Déclinaisons de support print  | Maquettes web & mobile | Motion design & montages vidéos</p>
+                                    </div>
+                                    <div className="field_item">
+                                        <p className="item_title">Création graphique</p>
+                                        <p className="item_sub">Indesign, Illustrator, Photoshop, XD, After Effect, Premiere Pro</p>
+                                        <p className="item_utility">Déclinaisons de support print  | Maquettes web & mobile | Motion design & montages vidéos</p>
+                                    </div>
+                                    <div className="field_item">
+                                        <p className="item_title">Création graphique</p>
+                                        <p className="item_sub">Indesign, Illustrator, Photoshop, XD, After Effect, Premiere Pro</p>
+                                        <p className="item_utility">Déclinaisons de support print  | Maquettes web & mobile | Motion design & montages vidéos</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="block_field">
+                            <div className="field_wrapper">
+                                <h3 className="title yellow">Formations</h3>
+                                <div className="field_item_wrapper">
+                                    <div className="second_item">
+                                        <p className="item_title">My Digital School - Angers</p>
+                                        <p className="item_sub">Diplôme : Bachelor Concepteur et réalisateur web & digital spécialisation Webdesign</p>
+                                        <p className="item_utility">WebDesign | WebMarketing | Développement Web | Communication visuelle & digitale | Gestion de projets</p>
+                                        <p className="diplome">Diplôme obtenu</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
 
                         </div> : tab === 'contact' ? 
                         <div>
