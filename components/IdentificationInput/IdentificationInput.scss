@@ -1,0 +1,39 @@
+.block_identification{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    background-color: #F4f4f4;
+    
+
+    .user_identification_wrapper{
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+
+        .user_identification_item{
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            background-color: rgb(253, 253, 253);
+            margin:8px 5px;
+            padding: 8px 5px;
+            border-radius: 8px;
+
+            .user_identification_item_cross{
+                font-size: 8pt;
+                margin-left: 8px;
+            }
+        }
+    }
+
+    input{
+        border:none;
+        height: 100%;
+        background-color: #F4f4f4;
+
+        &:focus{
+            outline-width: 0;
+        }
+    }
+
+}
