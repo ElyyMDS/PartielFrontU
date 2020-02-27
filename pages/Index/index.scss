@@ -29,7 +29,7 @@
             }
     
             .block_particulier {
-                background-image: url("/assets/particulier.jpg");
+                background-image: url("/assets/particulier.png");
                 background-size: cover;
                 flex-basis: 45%;
                 height: 250px;
@@ -41,7 +41,7 @@
             }
     
             .block_entreprise {
-                background-image: url("/assets/entreprise.jpg");
+                background-image: url("/assets/entreprise.png");
                 background-size: cover;
                 flex-basis: 45%;
                 height: 250px;
@@ -238,12 +238,17 @@
             background-color: #ffffff;
             flex-basis: 50%;
             height: 100vh;
-            color: white;
             display: flex;
             flex-flow: column;
             justify-content: center;
             align-items: center;
             font-size: 20px;
+            line-height: 50px;
+
+            .border {
+                border-bottom: 1px solid black;
+                padding-bottom: 2rem;
+            }  
         }
 
         .block_faq_right {
@@ -356,6 +361,37 @@
             img {
                 width: 25px;
                 height: 20px;
+            }
+        }
+    }
+
+    .footer {
+        background-color: #F4F4F4;
+    }
+
+    .footer .block_footer {
+        display:flex;
+        flex-flow: row nowrap;
+        width: 80%;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: space-between;
+        
+        .liste {
+            display: flex;
+            flex-flow: row wrap;
+            list-style-type: none;
+            font-size: 20px;
+
+            li {
+                padding-right: 5rem;
+            }
+        }
+
+        .icon {
+
+            img {
+                padding-left: 2rem;
             }
         }
     }

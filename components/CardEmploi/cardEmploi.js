@@ -29,7 +29,7 @@ const CardEmploi = props => {
                   <p>{props.localisation}</p>
                 </div>
               </div>
-              <Button className="button" href="#" text="Lire plus" color="#FFC30B" width="20%" margin="2rem auto" border="3px solid #FFC30B"/>
+              <Button className="button" href="#" text="Lire plus" color="#FFC30B" width="20%" margin="2rem auto"/>
           </div>
       )
 }

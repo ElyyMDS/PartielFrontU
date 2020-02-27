@@ -15,10 +15,12 @@ const Index = props => {
 
     
     const data = [
-        {backgroundImg: `url('/assets/1.png')`, like: 410,username: "Alexandre"},
-        {backgroundImg: `url('/assets/2.jpg')`, like: 410,username: "Alexandre"},
-        {backgroundImg: `url('/assets/3.jpg')`, like: 410,username: "Alexandre"},
-        
+        {backgroundImg: `url('/assets/1.png')`, like: 5102,username: "Bodine"},
+        {backgroundImg: `url('/assets/2.jpg')`, like: 4100,username: "Alexandre"},
+        {backgroundImg: `url('/assets/3.jpg')`, like: 3410,username: "Axelle"},
+        {backgroundImg: `url('/assets/4.jpg')`, like: 3110,username: "Ely"},
+        {backgroundImg: `url('/assets/5.jpg')`, like: 2410,username: "Théo"},
+        {backgroundImg: `url('/assets/6.jpg')`, like: 1410,username: "Yann"}
     ]
     return(
         <Layout >
@@ -93,7 +95,10 @@ const Index = props => {
                     </div>
 
                     <div className="block_faq_left">
-
+                        <p>Quels sont les forfaits premium ?</p>
+                        <p>J’ai un problème avec la connexion à mon compte</p>
+                        <p>Comment désactiver son forfait premium ?</p>
+                        <p className="border">Optimiser son CV pour qu’il vous ressemble </p>
                     </div>
 
                     <div className="block_faq_right">
@@ -121,6 +126,22 @@ const Index = props => {
                         </div>
                     </div>
                 </div>
+                <footer className="footer">
+                    <div className="block_footer">
+                        <ul className="liste">
+                            <li>Plan du site</li>
+                            <li>Conditions d'utilisations</li>
+                            <li>Confidentialités</li>
+                            <li>FAQ</li>
+                            <li>Aide</li>
+                        </ul>
+                        <div className="icon">
+                            <img src="/assets/facebook.svg"></img>
+                            <img src="/assets/twitter.svg"></img>
+                            <img src="/assets/instagram.svg"></img>
+                        </div>
+                    </div>
+                </footer>
             </main>
         </Layout>
     );

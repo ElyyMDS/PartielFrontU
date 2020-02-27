@@ -55,7 +55,7 @@ const Tips = props => {
                         <div className="inner">
                             <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum commodo libero non nisi condimentumumsan finibus augue dignissim. Deld Nullam tincidunt.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum commodo libero non nisi condimentumumsan finibus augue dignissim. Deld Nullam tincidunt.
                             </p>
-                            <Button href={`/tips/${activeElement}`} color="#FFC30B" text="Voir l'article" />
+                            <Button href={`/tips/${activeElement}`} color="#FFC30B" text="Voir l'article"/>
                         </div>
                         <div className="block_img" style={{order: activeElement>2 ? -1 : 2}}>
                             <img src="/assets/1.png" className="answer_img" />
@@ -77,6 +77,7 @@ const Tips = props => {
                         <h3 className="sub_category">Lettre de motivation</h3>
                         <h3 className="sub_category">Recherches</h3>
                     </div>
+                    <Button text="Voir tous les tips" href="#" width="50%" justifyContent="center" color="white" width="50%" margin="5rem auto 0"/>
                 </div>
                 <div className="block_text">
                     <h2>Retrouvez tous les <span>Tips</span> !</h2>

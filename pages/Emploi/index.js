@@ -28,8 +28,8 @@ const Emploi = props => {
                         <i class="fa fa-map-marker icon"></i> 
                         <input class="input-field" type="text" placeholder="Localisation" />
                     </div> 
-                    <div className="button">
-                        <Button href="#" text="Rechercher" textAlign="center" color="#FFC30B" border="2px solid #FFC30B"/>
+                    <div>
+                        <Button href="#" text="Rechercher" textAlign="center" color="#FFC30B"/>
                     </div>
                 </form>
                 <div className="wrapper">

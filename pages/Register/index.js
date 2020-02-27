@@ -11,7 +11,7 @@ import * as userActions from '../../redux/actions/user_actions';
 
 const Register = (props) => {
 
-    const [type,setType] = useState('user');
+    const [type,setType] = useState('');
     const [prenom,setPrenom] = useState('');
     const [nom,setNom] = useState('');
     const [password,setPassword] = useState('');
@@ -77,38 +77,58 @@ const Register = (props) => {
     }
 
 
-
-
     return (
         <Layout>
+            { type === '' ?
+            <div>
+                <div className="block_title">
+                    <h2>Inscription</h2>
+                </div>
+                <div className="block_choice">
+                    <h2>Vous êtes...</h2>
+                    <div className="wrapper">
+                        <div className="block_particulier" onClick={() => setType('user')}>
+                            <p>UN PARTICULIER</p>
+                            <span>S'inscrire</span>
+                        </div>
+                        <div className="block_entreprise" onClick={() => setType('company')}>
+                            <p>UNE ENTREPRISE</p>
+                            <span>S'inscrire</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            : 
             <main className="block_auth">
                 <div className="wrapper">
                     <div className="inner">
                         <SideAuth current="register"/>
                         <div className="form_block">
                             <h2 className="form_title">Inscription</h2>
-                                <form onSubmit={(e) => handleSubmit(e)} className="form">
-                                    {type === 'user' ? 
-                                        <div style={{display: 'flex',flexFlow: 'row nowrap',justifyContent: 'space-between',width: "73%"}}>
-                                            <CustomInput placeholder="Nom" width="42%" handleChange={handleNom}/>
-                                            <CustomInput placeholder="Prenom" width="42%" handleChange={handlePrenom}/>
-                                        </div>
-                                    :   <CustomInput placeholder="Nom de l'entreprise"  handleChange={handleCompany}/>
-                                    }
-                                    <CustomInput placeholder="Identifiant"  handleChange={handleUsername}/>
-                                    <CustomInput placeholder="Mail"  handleChange={handleEmail}/>
-                                    <CustomInput placeholder="Mot de passe"  handleChange={handlePassword}/>
-                                    <CustomInput placeholder="Confirmer mot de passe"  handleChange={handleDoublePassword}/>
-                                    <Button type="submit" color="#FFC30B" text="Inscription" borderColor="#FFC30B" />
-                                </form>
-                                <p className="password_lost" onClick={handleTypeChange} style={{textDecoration: 'underline', cursor: 'pointer'}} >{type === 'user' ? 'Je suis une compagnie' : 'Je suis un particulier'} </p>
-                            
-
+                                    <div>
+                                        <form onSubmit={(e) => handleSubmit(e)} className="form">
+                                            {type === 'user' ?
+                                                <div style={{display: 'flex',flexFlow: 'row nowrap',justifyContent: 'space-between',width: "73%"}}>
+                                                    <CustomInput placeholder="Nom" width="42%" handleChange={handleNom}/>
+                                                    <CustomInput placeholder="Prenom" width="42%" handleChange={handlePrenom}/>
+                                                </div>
+                                             : type === 'company' ?   
+                                                <CustomInput placeholder="Nom de l'entreprise"  handleChange={handleCompany}/>
+                                            : false }
+                                            <CustomInput placeholder="Identifiant"  handleChange={handleUsername}/>
+                                            <CustomInput placeholder="Mail"  handleChange={handleEmail}/>
+                                            <CustomInput placeholder="Mot de passe"  handleChange={handlePassword}/>
+                                            <CustomInput placeholder="Confirmer mot de passe"  handleChange={handleDoublePassword}/>
+                                            <Button type="submit" color="#FFC30B" text="Inscription" borderColor="#FFC30B" />
+                                        </form>
+                                        <p className="password_lost" onClick={handleTypeChange} style={{textDecoration: 'underline', cursor: 'pointer'}} >{type === 'user' ? 'Je suis une compagnie' : 'Je suis un particulier'} </p>
+                                    </div>
                             <p className="link_other">Vous possédez déjà un compte ?<Link href="/login"><a> Connectez-vous !</a></Link></p>
                         </div>
                     </div>
                 </div>
             </main>
+        }   
         </Layout>
       )
 }
