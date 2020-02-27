@@ -1,4 +1,77 @@
-.block_auth{
+.block_title {
+    h2 {
+        text-align: center;
+        font-size: 50px;
+        font-weight: 900;
+        padding: 1rem 0 2rem 0;    
+        font-family: "Montserrat Black";
+        
+    }
+}
+
+.block_choice {
+    width: 70%;
+    background-color: #F4F4F4;
+    padding: 2rem 2rem 3rem;
+    margin: 2rem auto 4rem;
+    height: 45vh;
+
+    h2 {
+        text-align: center;
+        margin: 0 0 2rem 0;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        width: 80%;
+        margin: 0 auto;
+        color:white;
+
+        span {
+            color: #FFC30B;
+            font-size: 18px;
+        }
+
+        p {
+            padding-bottom: 1rem;
+            font-size: 24px;
+        }
+
+        a {
+            color: white;
+        }
+
+        .block_particulier {
+            background-image: url("/assets/particulier.png");
+            background-size: cover;
+            flex-basis: 45%;
+            height: 300px;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .block_entreprise {
+            background-image: url("/assets/entreprise.png");
+            background-size: cover;
+            flex-basis: 45%;
+            height: 300px;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+    }
+}
+
+    .block_auth{
     height:90vh;
     width: 100%;
     display: flex;

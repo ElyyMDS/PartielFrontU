@@ -20,13 +20,12 @@
 
     .bg_computer {
         position: absolute;
-        right: 10%;
-        top: 20%;
+        right: 0;
+        top: 30%;
 
                             
         img {
-            width: 400px;
-            height: 400px;
+            width: 70%;
         }
     }
 
@@ -107,19 +106,21 @@
             -moz-box-shadow: 0px 0px 3px 0px rgba(204,204,204,0.75);
             box-shadow: 0px 0px 3px 0px rgba(204,204,204,0.75);
             z-index: 1;
-            overflow-y: hidden;
+            overflow: hidden;
 
             .inner {
                 flex-basis: 60%;
                 margin: 0 auto;
                 text-align: left;
+                padding-bottom: 3rem;
             }
             
             .block_img {
                 flex-basis: 30%;
                 
                 .answer_img {
-                    max-width: 100%;
+                    width: 100%;
+                    object-fit: contain;
                 }
             }
         }

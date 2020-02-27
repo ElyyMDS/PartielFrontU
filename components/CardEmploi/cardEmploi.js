@@ -1,13 +1,12 @@
 import React from 'react';
 import './cardEmploi.scss';
 import Button from '../Button/button';
-import ReactDOM from 'react-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import { faMoneyCheckAlt } from '@fortawesome/free-solid-svg-icons';
 
 
-const Card_emploi = props => {
+const CardEmploi = props => {
       return (
           <div className="card_emploi">
               <div className="img">
@@ -30,9 +29,9 @@ const Card_emploi = props => {
                   <p>{props.localisation}</p>
                 </div>
               </div>
-              <Button href="#" text="Lire plus" color="#FFC30B" width="20%" margin="2rem auto" border="3px solid #FFC30B"/>
+              <Button className="button" href="#" text="Lire plus" color="#FFC30B" width="20%" margin="2rem auto"/>
           </div>
       )
 }
 
-export default Card_emploi
+export default CardEmploi
