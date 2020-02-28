@@ -6,7 +6,6 @@ import Swal from 'sweetalert2';
 import Layout from '../../../components/Layout/layout';
 import Button from '../../../components/Button/button';
 import Card from '../../../components/Card/Card';
-// import IdentificationInput from '../../../components/IdentificationInput/IdentificationInput';
 import '../profile.scss'
 
 const Profile = (props) => {
@@ -17,6 +16,7 @@ const Profile = (props) => {
     const [tab,setTab] = useState('cv');
     const [file,setFile] = useState([]);
     const [postValue,setPostValue] = useState([]);
+    const [pdg,setPdg] = useState('Mr Arthur Dubois');
     const [modif,setModif] = useState(false);
     const [type,setType] = useState('company'); 
 
@@ -209,50 +209,32 @@ const Profile = (props) => {
                                 <div className="field_item_wrapper">
                                     <div className="second_item">
                                         <p className="item_title">My Digital School - Angers</p>
-                                        <p className="item_sub">Diplôme : Bachelor Concepteur et réalisateur web & digital spécialisation Webdesign</p>
-                                        <p className="item_utility">WebDesign | WebMarketing | Développement Web | Communication visuelle & digitale | Gestion de projets</p>
-                                        <p className="diplome">Diplôme obtenu</p>
+                                        <div className="gray_block">
+                                            <p className="item_sub">Diplôme : Bachelor Concepteur et réalisateur web & digital spécialisation Webdesign</p>
+                                            <p className="item_utility">WebDesign | WebMarketing | Développement Web | Communication visuelle & digitale | Gestion de projets</p>
+                                            <p className="diplome">Diplôme obtenu</p>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="block_field">
-                            <div className="field_wrapper">
-                                <h3 className="title black">Compétences</h3>
-                                <div className="field_item_wrapper">
-                                    <div className="field_item">
-                                        <p className="item_title">Création graphique</p>
-                                        <p className="item_sub">Indesign, Illustrator, Photoshop, XD, After Effect, Premiere Pro</p>
-                                        <p className="item_utility">Déclinaisons de support print  | Maquettes web & mobile | Motion design & montages vidéos</p>
-                                    </div>
-                                    <div className="field_item">
-                                        <p className="item_title">Création graphique</p>
-                                        <p className="item_sub">Indesign, Illustrator, Photoshop, XD, After Effect, Premiere Pro</p>
-                                        <p className="item_utility">Déclinaisons de support print  | Maquettes web & mobile | Motion design & montages vidéos</p>
-                                    </div>
-                                    <div className="field_item">
-                                        <p className="item_title">Création graphique</p>
-                                        <p className="item_sub">Indesign, Illustrator, Photoshop, XD, After Effect, Premiere Pro</p>
-                                        <p className="item_utility">Déclinaisons de support print  | Maquettes web & mobile | Motion design & montages vidéos</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="block_field">
-                            <div className="field_wrapper">
-                                <h3 className="title yellow">Formations</h3>
-                                <div className="field_item_wrapper">
                                     <div className="second_item">
                                         <p className="item_title">My Digital School - Angers</p>
-                                        <p className="item_sub">Diplôme : Bachelor Concepteur et réalisateur web & digital spécialisation Webdesign</p>
-                                        <p className="item_utility">WebDesign | WebMarketing | Développement Web | Communication visuelle & digitale | Gestion de projets</p>
-                                        <p className="diplome">Diplôme obtenu</p>
+                                        <div className="gray_block">
+                                            <p className="item_sub">Diplôme : Bachelor Concepteur et réalisateur web & digital spécialisation Webdesign</p>
+                                            <p className="item_utility">WebDesign | WebMarketing | Développement Web | Communication visuelle & digitale | Gestion de projets</p>
+                                            <p className="diplome">Diplôme obtenu</p>
+                                        </div>
+                                    </div>
+                                    <div className="second_item">
+                                        <p className="item_title">My Digital School - Angers</p>
+                                        <div className="gray_block">
+                                            <p className="item_sub">Diplôme : Bachelor Concepteur et réalisateur web & digital spécialisation Webdesign</p>
+                                            <p className="item_utility">WebDesign | WebMarketing | Développement Web | Communication visuelle & digitale | Gestion de projets</p>
+                                            <p className="diplome">Diplôme obtenu</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
 
 
 
@@ -268,23 +250,32 @@ const Profile = (props) => {
                                 <Button text="Sauvegarder" color="#FFC30B" borderColor="#FFC30B" href="#" width="90%" onClick={handleSave}/>
                             </div>
                             :
-                            <div className="new_post_button">
-                                <p className="button_post" onClick={() => setModif(true)} >
-                                    +
-                                </p>
+                            <div style={{display: 'flex', alignItems:'center',justifyContent:'flex-end'}}>
+                                <Button text="Modifier" color="#FFC30B" borderColor="#FFC30B" href="#" width="90%" onClick={() => setModif(true)}/>
                             </div>
                             }
                             {type === 'company' ? 
                             <div className="company_wrapper">
-                                <div className="company_item pdg">
+                                {modif ? <div className="company_item pdg">
                                     <h3>PDG<span>.</span></h3>
-                                    <p>Mr Arthur Dubois</p>
+                                    <input value={pdg} className="sub" onChange={(e) => setPdg(e.currentTarget.value)}/>
                                 </div>
+                                : <div className="company_item pdg">
+                                <h3>PDG<span>.</span></h3>
+                                <p>{pdg}</p>
+                            </div>}
+                                {modif ? 
+                                <div className="company_item rh">
+                                    <h3>RH<span>.</span></h3>
+                                    <input value="Mme Léa BODIN" className="sub" placeholder="nom"/>
+                                    <input value="lea.bodin[@]cstudio.com" className="sub" placeholder="email"/>
+                                </div>
+                                :
                                 <div className="company_item rh">
                                     <h3>RH<span>.</span></h3>
                                     <p>Mme Léa BODIN</p>
                                     <p>lea.bodin[@]cstudio.com</p>
-                                </div>
+                                </div>}
                             </div> : 
                             false} 
                             <div className="profile_contact">
