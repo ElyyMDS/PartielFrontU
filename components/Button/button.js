@@ -23,7 +23,7 @@ const Button = (props) => {
     } else {
         return( 
             <Link href={props.href}>
-                <a>
+                <a onClick={props.onClick ? props.onClick : false}>
                     <p className="button" style={style}>{props.text}</p>
                 </a>
             </Link>
